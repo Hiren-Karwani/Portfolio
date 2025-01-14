@@ -1,0 +1,573 @@
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  transition: all 0.5s ease-out; }
+  .menu-btn .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: #000000;
+    transition: all 0.5s ease-out; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px); }
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden; }
+  .menu.show {
+    visibility: visible; }
+  .menu-branding, .menu-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden; }
+  .menu-nav {
+    margin: 0;
+    padding: 0;
+    background: #373737;
+    list-style: none;
+    transform: translate3d(0, -100%, 0);
+    transition: all 0.5s ease-out; }
+    .menu-nav.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-branding {
+    background: #444;
+    transform: translate3d(0, 100%, 0);
+    transition: all 0.5s ease-out; }
+    .menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+    .menu-branding .portrait {
+      width: 250px;
+      height: 250px;
+      background: url("../img/portrait.jpg");
+      border-radius: 50%;
+      border: solid 3px #eece1a; }
+  .menu .nav-item {
+    transform: translate3d(600px, 0, 0);
+    transition: all 0.5s ease-out; }
+    .menu .nav-item.show {
+      transform: translate3d(0, 0, 0); }
+    .menu .nav-item.current > a {
+      color: #eece1a; }
+  .menu .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 40px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: 300;
+    color: #000000;
+    text-decoration: none;
+    transition: all 0.5s ease-out; }
+    .menu .nav-link:hover {
+      color: chartreuse;
+        transform: scale(1.25)
+}
+
+.nav-item:nth-child(1) {
+  transition-delay: 0.1s; }
+
+.nav-item:nth-child(2) {
+  transition-delay: 0.2s; }
+
+.nav-item:nth-child(3) {
+  transition-delay: 0.3s; }
+
+.nav-item:nth-child(4) {
+  transition-delay: 0.4s; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #333;
+  color: #000000;
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5; }
+  body#bg-img {
+    background: url(../img/background.jpg);
+    background: rgba(68, 68, 68, 0.9), url(../img/background.jpg);
+    background-attachment: fixed;
+    background-size: cover; } 
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400; }
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 6rem; }
+  h1.sm-heading,
+  h2.sm-heading,
+  h3.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    /* background: rgba(73, 73, 73, 0.5); */
+    } 
+
+a {
+  color: #000000;
+  text-decoration: none; }
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%; }
+
+.text-secondary {
+  color: #000000; }
+
+main {
+  padding: 4rem;
+  min-height: calc(100vh - 60px); }
+  main .icons {
+    margin-top: 1rem; }
+    main .icons a {
+      padding: 0.4rem; }
+      main .icons a:hover {
+        color: #eece1a;
+        transition: all 0.5s ease-out; }
+  main#home {
+    overflow: hidden; }
+    main#home h1 {
+      margin-top: 20vh; }
+
+      .bio {
+        text-align: left; /* Align text to the left */
+        padding: 1rem;
+        border-left: 4px solid #eece1a; /* Left border for visual emphasis */
+        margin: 1rem 0;
+        display: block; /* Ensure default block layout */
+      }
+      
+      .bio h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        color: #eece1a;
+        text-align: left; /* Force text alignment to the left */
+      }
+      
+      .bio a {
+        text-decoration: none; /* Removes underline from link */
+        margin-top: 0.5rem;
+        display: inline-block; /* Aligns the link/button properly */
+        text-align: left; /* Ensures link text is left-aligned */
+      }
+      
+      .bio a button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        text-align: left; /* Ensures button content is left-aligned */
+      }
+      
+      .bio a button:hover {
+        background-color: #0056b3;
+      }
+      
+      .bio a button:focus {
+        outline: none;
+        box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.75);
+      }
+      
+
+/* General Styles for About Page */
+#about {
+  color: #fff; /* Text color set to white */
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #222; /* Dark background for contrast */
+}
+
+#about .lg-heading {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#about .lg-heading .text-secondary {
+  color: #eece1a; /* Highlighted text in gold-like color */
+}
+
+#about .sm-heading {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #ccc; /* Slightly lighter text for a subtle effect */
+  text-transform: uppercase;
+}
+
+/* About Info Section */
+
+.about-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0;
+  align-items: center;
+}
+
+/* Jobs Section - Align All in One Row */
+.jobs {
+  display: flex;
+  gap: 1rem; /* Space between job cards */
+  justify-content: center; /* Center the jobs within the container */
+  flex-wrap: nowrap; /* Prevent wrapping to the next line */
+  margin: 2rem 0; /* Adds space around the jobs section */
+}
+
+.jobs .job {
+  flex: 1; /* Equal width for each job */
+  min-width: 200px; /* Minimum width for each job */
+  max-width: 300px; /* Optional: Limit maximum width */
+  background: #222;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  text-align: left; /* Aligns text to the left within the job card */
+}
+
+.jobs .job h3 {
+  font-size: 1.5rem;
+  color: #eece1a;
+  margin-bottom: 0.5rem; /* Adds space below the heading */
+  position: relative; /* Allows positioning of the underline */
+}
+
+.jobs .job h3::after {
+  content: ''; /* Creates the yellow underline */
+  display: block;
+  width: 100%; /* Matches the width of the heading */
+  height: 4px; /* Thickness of the line */
+  background-color: #eece1a; /* Yellow color */
+  margin-top: 0.5rem; /* Space between the heading and line */
+}
+
+.jobs .job h6 {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.jobs .job p {
+  line-height: 1.5;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .jobs {
+      flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  }
+
+  .jobs .job {
+      flex: 1 1 calc(100% - 2rem); /* Each job takes the full width minus gaps */
+      margin-bottom: 1rem;
+  }
+}
+
+
+.about-info .bio-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* Makes the image circular */
+  margin: 0 auto;
+  border: 4px solid #eece1a; /* Border matching highlight color */
+}
+
+.about-info .bio {
+  text-align: left;
+  padding: 1rem;
+  border-left: 4px solid #eece1a; /* Left border for visual emphasis */
+}
+
+.about-info .bio h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #eece1a;
+}
+
+.about-info .bio p {
+  line-height: 1.5;
+  font-size: 1rem;
+  color: #ddd; /* Lighter text for better readability */
+}
+
+/* Job Section */
+.about-info .job {
+  text-align: left;
+  padding: 1rem;
+  background: #222; /* Slightly lighter background for jobs */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.about-info .job h3 {
+  font-size: 1.5rem;
+  color: #eece1a;
+}
+
+.about-info .job h6 {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.about-info .job p {
+  line-height: 1.5;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* Project Section */
+.projects .item img {
+  width: 200px; /* Set a fixed width */
+  height: 200px; /* Set a fixed height */
+  object-fit: fit; /* Ensure the image covers the space */
+}
+
+
+/* Styles for the #work section */
+#work {
+  color: #fff; /* Set text color to white */
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #222; /* Optional: Add a contrasting background for better readability */
+}
+
+#work .lg-heading {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #fff; /* Ensure heading text is white */
+  text-transform: uppercase;
+}
+
+#work .lg-heading .text-secondary {
+  color: #eece1a; /* Optional: Highlight secondary text in a different color */
+}
+
+#work .sm-heading {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #fff; /* Ensure subheading text is white */
+  text-transform: uppercase;
+  opacity: 0.8; /* Slightly reduce opacity for a subtle effect */
+}
+
+/* Ensure all child elements within #work inherit white text unless explicitly overridden */
+#work * {
+  color: inherit;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.projects .item {
+  background: #333;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.projects .item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.projects .item img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.projects .item:hover img {
+  transform: scale(1.1);
+}
+
+.project-info {
+  margin-bottom: 1rem;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  color: #eece1a;
+  margin: 0.5rem 0;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.projects .btn-light,
+.projects .btn-dark {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease-in-out;
+}
+
+.projects .btn-light {
+  background: #eece1a;
+  color: #222;
+}
+
+.projects .btn-light:hover {
+  background: #ffdd33;
+}
+
+.projects .btn-dark {
+  background: #444;
+}
+
+.projects .btn-dark:hover {
+  background: #222;
+}
+
+  .projects img {
+    width: 100%;
+    border: 3px #000000 solid; }
+    .projects img:hover {
+      opacity: 0.5;
+      border-color: #eece1a;
+      transition: all 0.5s ease-out; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 2rem;
+    border: 3px #000000 solid;
+    background: #c4c4c4;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .boxes div:hover {
+      padding: 0.5rem 1.5rem;
+      background: #eece1a;
+      color: #000; }
+      .boxes div:hover span {
+        color: #000; }
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background: #eece1a;
+    color: #000; }
+
+.btn-dark {
+  background: black;
+  color: #ffffff; }
+
+.btn-light {
+  background: #c4c4c4;
+  color: #222; }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #c4c4c4;
+  color: #000000;
+  height: 60px; }
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portrait {
+      background: url("../img/portrait_small.jpg");
+      width: 150px;
+      height: 150px; }
+ 
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .about-info {
+            grid-template-columns: 1fr; /* Stack bio and jobs vertically */
+        }
+    
+        .jobs {
+            flex-direction: column; /* Stack jobs vertically on small screens */
+        }
+    }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (max-width: 500px) {
+  main {
+    padding: 2rem; }
+    main #home h1 {
+      margin-top: 10vh; }
+    main .lg-heading {
+      margin-top: 1rem;
+      font-size: 5rem; }
+  .projects {
+    grid-template-columns: 1fr; } }

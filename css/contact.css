@@ -1,0 +1,148 @@
+/* General Reset and Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background: #1c1c1c;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  font-size: 18px; /* Increased base font size */
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .menu-btn {
+  display: none;
+}
+
+header .menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+header .menu-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+header .nav-item {
+  text-transform: uppercase;
+}
+
+header .nav-link {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header .nav-link:hover {
+  color: #eece1a;
+  transform: scale(1.1); /* Makes the text slightly larger */
+}
+
+header .nav-item.current .nav-link {
+  color: #eece1a;
+}
+
+/* Main Section Styling */
+main {
+  text-align: center;
+  padding: 2rem;
+}
+
+main h1.lg-heading {
+  font-size: 3.5rem; /* Increased heading size */
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+main h1.lg-heading:hover {
+  transform: scale(1.1); /* Enlarges the heading on hover */
+}
+
+main h1 span.text-secondary {
+  color: #eece1a;
+}
+
+main h2.sm-heading {
+  font-size: 1.8rem; /* Increased subheading size */
+  color: #bbb;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+}
+
+main h2.sm-heading:hover {
+  transform: scale(1.1); /* Enlarges the subheading on hover */
+}
+
+.boxes {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.boxes div {
+  background: #333;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  min-width: 250px;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.boxes div:hover {
+  background: #444;
+  transform: scale(1.1); /* Enlarges the box on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8); /* Adds a stronger shadow */
+}
+
+.boxes div span.text-secondary {
+  color: #eece1a;
+  font-weight: bold;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #333;
+  color: #fff;
+  font-size: 1rem; /* Increased footer font size */
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.5);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+footer:hover {
+  background: #444;
+  color: #eece1a; /* Changes color scheme on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header .menu-nav {
+      flex-direction: column;
+  }
+
+  .boxes {
+      flex-direction: column;
+      gap: 1.5rem;
+  }
+}
