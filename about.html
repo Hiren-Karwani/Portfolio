@@ -65,6 +65,16 @@
         <h3 class="text-secondary">RESUME</h3>
         <a href="assets/resume.pdf" download="Hiren-Karwani_Resume.pdf" class="btn-download">
           <button>Download</button>
+          <script>
+            document.getElementById('downloadBtn').addEventListener('click', function() {
+              var link = document.createElement('a');
+              link.href = 'assets/resume.pdf'; // Path to the file
+              link.download = 'Hiren-Karwani_Resume.pdf'; // Name of the file to download
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            });
+          </script>
         </a>
       </div>
     
