@@ -298,7 +298,7 @@ function initGSAP() {
 }
 
 /* ============================================================
-   7. CONTACT FORM (mock submission)
+   7. CONTACT FORM — Formspree AJAX Submission
    ============================================================ */
 
 function initContactForm() {
@@ -306,39 +306,113 @@ function initContactForm() {
   if (!form) return;
 
   const successMsg = document.getElementById('form-success-msg');
-  const submitBtn = document.getElementById('contact-submit-btn');
+  const submitBtn  = document.getElementById('contact-submit-btn');
 
-  form.addEventListener('submit', (e) => {
+  // Store original button label so we can restore it on error
+  const originalBtnHTML = submitBtn
+    ? submitBtn.innerHTML
+    : '<span>Send Message</span> <i class="fas fa-paper-plane"></i>';
+
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const name = document.getElementById('contact-name')?.value.trim();
-    const email = document.getElementById('contact-email')?.value.trim();
+    // ── 1. Client-side validation ────────────────────────────
+    const name    = document.getElementById('contact-name')?.value.trim();
+    const email   = document.getElementById('contact-email')?.value.trim();
     const message = document.getElementById('contact-message')?.value.trim();
 
     if (!name || !email || !message) {
-      alert('Please fill in all fields.');
+      showFormError('Please fill in all fields before sending.');
       return;
     }
 
-    // Simulate submission
-    if (submitBtn) {
-      submitBtn.innerHTML = '<span>Sending...</span> <i class="fas fa-spinner fa-spin"></i>';
-      submitBtn.disabled = true;
+    // ── 2. Loading state ─────────────────────────────────────
+    setLoading(true);
+
+    try {
+      // ── 3. POST to Formspree via Fetch ────────────────────
+      const response = await fetch(form.action, {
+        method:  'POST',
+        body:    new FormData(form),
+        headers: { 'Accept': 'application/json' },
+      });
+
+      if (response.ok) {
+        // ── 4a. SUCCESS ──────────────────────────────────────
+        form.reset();
+
+        // Hide the submit button — it's no longer needed
+        if (submitBtn) {
+          submitBtn.style.display = 'none';
+        }
+
+        // Reveal and animate the success message
+        if (successMsg) {
+          successMsg.style.display = 'block';
+          if (typeof gsap !== 'undefined') {
+            gsap.fromTo(
+              successMsg,
+              { opacity: 0, y: 12 },
+              { opacity: 1, y: 0, duration: 0.55, ease: 'power3.out' }
+            );
+          }
+        }
+      } else {
+        // ── 4b. SERVER-SIDE ERROR (4xx / 5xx) ────────────────
+        const data = await response.json().catch(() => ({}));
+        const serverMsg = data?.errors?.map(err => err.message).join(', ')
+          || 'Something went wrong. Please try again.';
+        showFormError(serverMsg);
+        setLoading(false);
+      }
+
+    } catch (networkError) {
+      // ── 5. NETWORK / FETCH ERROR ─────────────────────────
+      console.error('Form submission error:', networkError);
+      showFormError('Network error — please check your connection and try again.');
+      setLoading(false);
     }
 
-    setTimeout(() => {
-      if (submitBtn) {
-        submitBtn.innerHTML = '<span>Send Message</span> <i class="fas fa-paper-plane"></i>';
-        submitBtn.disabled = false;
-      }
-      if (successMsg) successMsg.style.display = 'block';
-      form.reset();
+    // ── Helpers ───────────────────────────────────────────────
 
-      // Animate success message
-      if (typeof gsap !== 'undefined' && successMsg) {
-        gsap.fromTo(successMsg, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.5 });
+    function setLoading(isLoading) {
+      if (!submitBtn) return;
+      if (isLoading) {
+        submitBtn.innerHTML = '<span>Sending...</span> <i class="fas fa-spinner fa-spin"></i>';
+        submitBtn.disabled  = true;
+        submitBtn.style.opacity = '0.75';
+      } else {
+        submitBtn.innerHTML = originalBtnHTML;
+        submitBtn.disabled  = false;
+        submitBtn.style.opacity = '';
       }
-    }, 1500);
+    }
+
+    function showFormError(msg) {
+      // Reuse the existing success-msg element for inline error display
+      if (!successMsg) { alert(msg); return; }
+
+      successMsg.textContent = `⚠ ${msg}`;
+      successMsg.style.color  = '#ff6b6b';
+      successMsg.style.display = 'block';
+
+      if (typeof gsap !== 'undefined') {
+        gsap.fromTo(
+          successMsg,
+          { opacity: 0, y: 8 },
+          { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }
+        );
+      }
+
+      // Auto-hide error after 6 seconds and restore success-msg styles
+      setTimeout(() => {
+        if (successMsg) {
+          successMsg.style.display = 'none';
+          successMsg.style.color   = '';
+          successMsg.textContent   = '';
+        }
+      }, 6000);
+    }
   });
 }
 
