@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Hiren Karwani — Full-Stack Developer & Machine Learning Engineer. B.Tech CS student at VESIT, Mumbai. Building intelligent digital experiences.">
+  <title>Hiren Karwani — Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body id="bg-img">
+
+  <!-- Custom Cursor -->
+  <div id="cursor" class="cursor"></div>
+  <div id="cursor-follower" class="cursor-follower"></div>
+
+  <!-- Page Transition Overlay -->
+  <div class="page-transition"></div>
+
+  <header>
+    <div class="menu-btn" id="menu-btn" aria-label="Open navigation menu" role="button" tabindex="0">
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+    </div>
+
+    <nav class="menu" id="main-menu" aria-label="Main Navigation">
+      <div class="menu-branding">
+        <div class="portrait" aria-label="Hiren Karwani portrait"></div>
+      </div>
+      <ul class="menu-nav">
+        <li class="nav-item current">
+          <a href="index.html" class="nav-link magnetic-btn">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link magnetic-btn">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a href="work.html" class="nav-link magnetic-btn">My Work</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link magnetic-btn">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="home">
+    <div class="home-content">
+      <p class="home-intro gsap-fade-up">Hello, I'm</p>
+      <h1 class="lg-heading gsap-fade-up">
+        Hiren
+        <span class="text-secondary">Karwani</span>
+      </h1>
+      <h2 class="sm-heading gsap-fade-up">
+        Full-Stack Developer &amp; Machine Learning Engineer
+      </h2>
+      <p class="home-tagline gsap-fade-up">
+        Building intelligent, scalable, and beautiful digital experiences.<br>
+        B.Tech CS @ VESIT Mumbai &bull; Class of 2026.
+      </p>
+      <div class="home-cta gsap-fade-up">
+        <a href="work.html" class="btn-cta magnetic-btn" id="view-work-btn">
+          View My Work <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="about.html" class="btn-outline magnetic-btn" id="about-me-btn">
+          About Me
+        </a>
+      </div>
+      <div class="icons gsap-fade-up">
+        <a href="mailto:karwanih7@gmail.com" target="_blank" class="icon-link magnetic-btn" aria-label="Email" id="email-icon">
+          <i class="fas fa-envelope fa-2x"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/hiren-karwani/" target="_blank" class="icon-link magnetic-btn" aria-label="LinkedIn" id="linkedin-icon">
+          <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+        <a href="https://github.com/Hiren-Karwani" target="_blank" class="icon-link magnetic-btn" aria-label="GitHub" id="github-icon">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description"
+    content="About Hiren Karwani — B.Tech CS student at VESIT, Mumbai. Full-stack developer and ML enthusiast with hands-on industry experience.">
+  <title>About — Hiren Karwani</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <!-- Custom Cursor -->
+  <div id="cursor" class="cursor"></div>
+  <div id="cursor-follower" class="cursor-follower"></div>
+
+  <!-- Page Transition Overlay -->
+  <div class="page-transition"></div>
+
+  <header>
+    <div class="menu-btn" id="menu-btn" aria-label="Open navigation menu" role="button" tabindex="0">
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+    </div>
+
+    <nav class="menu" id="main-menu" aria-label="Main Navigation">
+      <div class="menu-branding">
+        <div class="portrait" aria-label="Hiren Karwani portrait"></div>
+      </div>
+      <ul class="menu-nav">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link magnetic-btn">Home</a>
+        </li>
+        <li class="nav-item current">
+          <a href="about.html" class="nav-link magnetic-btn">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a href="work.html" class="nav-link magnetic-btn">My Work</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link magnetic-btn">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="about">
+
+    <h1 class="lg-heading gsap-fade-up">
+      About <span class="text-secondary">Me</span>
+    </h1>
+
+    <!-- BIO SECTION -->
+    <section class="about-info" aria-label="Bio and Resume">
+      <img src="img/Image.jpg" alt="Hiren Karwani" class="bio-image gsap-fade-up">
+
+      <div class="bio gsap-fade-up">
+        <span class="section-label">Bio</span>
+        <p>
+          I'm <strong>Hiren Karwani</strong>, a final-year B.Tech Computer Science student at
+          <strong>Vivekanand Education Society's Institute of Technology (VESIT), Mumbai</strong>, graduating in 2026.
+          I bridge the gap between robust backend engineering and pixel-perfect front-end experiences — with a growing
+          passion for Machine Learning and AI-driven products.
+        </p>
+        <p>
+          With real-world exposure across startups and research environments — from building
+          AI accessibility tools to developing scalable e-commerce platforms — I bring both
+          technical depth and product thinking to every project I touch.
+        </p>
+
+        <span class="section-label" style="margin-top:1.5rem;">Resume</span>
+        <a href="assets/Hiren Karwani resume 2026.pdf" download class="btn-download magnetic-btn"
+          id="resume-download-btn">
+          <i class="fas fa-file-download"></i> Download Resume
+        </a>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="about-section gsap-fade-up" aria-label="Education">
+      <h2 class="section-title"><span class="text-secondary">Education</span></h2>
+      <div class="edu-card">
+        <div class="edu-info">
+          <h3>B.Tech — Computer Science &amp; Engineering</h3>
+          <p class="edu-school">Vivekanand Education Society's Institute of Technology (VESIT), Mumbai University</p>
+        </div>
+        <div class="edu-badge">B.Tech</div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-info">
+          <h3>Advanced Diploma in IT Infrastructure, Systems &amp; Security</h3>
+          <p class="edu-school">C-DAC (Centre for Development of Advanced Computing)</p>
+          <p class="edu-meta">2023 &bull; Certification</p>
+        </div>
+        <div class="edu-badge">C-DAC</div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE TIMELINE -->
+    <section class="about-section" aria-label="Professional Experience">
+      <h2 class="section-title gsap-fade-up"><span class="text-secondary">Experience</span></h2>
+      <div class="timeline" role="list">
+
+        <div class="timeline-item gsap-timeline-item" role="listitem">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Dec 2025 – Feb 2026</div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-header">
+              <h3>Software Developer Intern</h3>
+              <span class="timeline-company">Aydentify</span>
+            </div>
+            <ul>
+              <li>Built and optimized full-stack web features using <strong>React.js</strong> and
+                <strong>Node.js</strong>, reducing page load times by 40%.
+              </li>
+              <li>Integrated <strong>RESTful APIs</strong> for real-time data synchronization across the identity
+                verification platform.</li>
+              <li>Implemented responsive UI components and collaborated in agile sprints with a cross-functional team.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item gsap-timeline-item" role="listitem">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Jun 2024 – Aug 2024</div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-header">
+              <h3>Software Engineering Intern</h3>
+              <span class="timeline-company">Capgemini</span>
+            </div>
+            <ul>
+              <li>Worked on enterprise-grade <strong>Java Spring Boot</strong> microservices, improving backend
+                throughput by 25%.</li>
+              <li>Developed and optimised <strong>SQL</strong> queries and database schemas for high-volume
+                transactional systems.</li>
+              <li>Participated in code reviews and deployed features to pre-production environments using <strong>CI/CD
+                  pipelines</strong>.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item gsap-timeline-item" role="listitem">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Mar 2024 – Jun 2024</div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-header">
+              <h3>ML &amp; Full-Stack Developer</h3>
+              <span class="timeline-company">WI VoiceOver</span>
+            </div>
+            <ul>
+              <li>Built an AI-powered accessibililty platform converting visual content to speech using <strong>Computer
+                  Vision</strong> and <strong>NLP</strong> models.</li>
+              <li>Achieved <strong>92% transcription accuracy</strong> using fine-tuned Whisper model and custom
+                post-processing pipeline.</li>
+              <li>Deployed solution on <strong>AWS EC2</strong>, serving 500+ active users with 99.5% uptime.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item gsap-timeline-item" role="listitem">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Aug 2023 – Feb 2024</div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-header">
+              <h3>Full-Stack Developer</h3>
+              <span class="timeline-company">PictoNarrot</span>
+            </div>
+            <ul>
+              <li>Led a team of 4 to build a multimodal AI app for audio translation, image summarization, and
+                transcription.</li>
+              <li>Engineered the <strong>React.js</strong> frontend and <strong>Python Flask</strong> backend,
+                integrating Google Vision API and OpenAI Whisper.</li>
+              <li>Reduced image-to-text processing latency by <strong>60%</strong> through async API batching and Redis
+                caching.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item gsap-timeline-item" role="listitem">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Jan 2023 – Jul 2023</div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-header">
+              <h3>Web Developer Intern</h3>
+              <span class="timeline-company">Emkon Global</span>
+            </div>
+            <ul>
+              <li>Developed and maintained frontend pages using <strong>HTML5, CSS3, JavaScript</strong> and
+                <strong>Bootstrap</strong> for a B2B SaaS platform.
+              </li>
+              <li>Integrated third-party payment gateways and improved checkout UX, increasing conversion rate by 18%.
+              </li>
+              <li>Worked closely with the design team to implement pixel-perfect responsive layouts across all devices.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="about-section" aria-label="Technical Skills">
+      <h2 class="section-title gsap-fade-up"><span class="text-secondary">Tech Stack</span></h2>
+      <div class="skills-grid gsap-fade-up">
+        <div class="skill-category">
+          <h4>Languages</h4>
+          <div class="skill-chips">
+            <span class="chip">Java</span>
+            <span class="chip">Python</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">C++</span>
+            <span class="chip">SQL</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h4>Frontend</h4>
+          <div class="skill-chips">
+            <span class="chip">React.js</span>
+            <span class="chip">Next.js</span>
+            <span class="chip">HTML5</span>
+            <span class="chip">CSS3 / SCSS</span>
+            <span class="chip">Tailwind CSS</span>
+            <span class="chip">GSAP</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h4>Backend &amp; ML</h4>
+          <div class="skill-chips">
+            <span class="chip">Node.js</span>
+            <span class="chip">Express.js</span>
+            <span class="chip">Spring Boot</span>
+            <span class="chip">Flask</span>
+            <span class="chip">TensorFlow</span>
+            <span class="chip">Scikit-learn</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h4>Tools &amp; Cloud</h4>
+          <div class="skill-chips">
+            <span class="chip">Git / GitHub</span>
+            <span class="chip">Docker</span>
+            <span class="chip">AWS (EC2, S3)</span>
+            <span class="chip">MongoDB</span>
+            <span class="chip">PostgreSQL</span>
+            <span class="chip">Redis</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS SECTION -->
+    <section class="about-section" aria-label="Certifications">
+      <h2 class="section-title gsap-fade-up"><span class="text-secondary">Certifications</span></h2>
+      <div class="cert-grid gsap-fade-up">
+        <div class="cert-card glass-card">
+          <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+          <div class="cert-info">
+            <h4>Advanced Diploma in IT Infrastructure, Systems &amp; Security</h4>
+            <p>C-DAC (Centre for Development of Advanced Computing) &bull; 2023</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="main-footer">
+    <p>Copyright &copy; 2026 &mdash; Hiren Karwani</p>
+  </footer>
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

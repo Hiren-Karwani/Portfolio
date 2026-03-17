@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description"
+    content="Hiren Karwani's project portfolio — Full-stack apps, ML tools, and real-world impact. ALS Detection, DataHub, Homemade Harmony, Nutriguide, and more.">
+  <title>My Work — Hiren Karwani</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <div id="cursor" class="cursor"></div>
+  <div id="cursor-follower" class="cursor-follower"></div>
+  <div class="page-transition"></div>
+
+  <header>
+    <div class="menu-btn" id="menu-btn" aria-label="Open navigation menu" role="button" tabindex="0">
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+    </div>
+
+    <nav class="menu" id="main-menu" aria-label="Main Navigation">
+      <div class="menu-branding">
+        <div class="portrait" aria-label="Hiren Karwani portrait"></div>
+      </div>
+      <ul class="menu-nav">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link magnetic-btn">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link magnetic-btn">About Me</a>
+        </li>
+        <li class="nav-item current">
+          <a href="work.html" class="nav-link magnetic-btn">My Work</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link magnetic-btn">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="work">
+    <h1 class="lg-heading gsap-fade-up">
+      My <span class="text-secondary">Work</span>
+    </h1>
+    <p class="work-subtitle gsap-fade-up">A selection of projects that challenge, excite, and push boundaries.</p>
+
+    <div class="projects">
+
+      <!-- 01 · ALS Detection -->
+      <article class="item gsap-project-card" aria-label="ALS Detection Project">
+        <div class="project-visual" data-gradient="blue">
+          <span class="project-number">01</span>
+          <div class="project-tags">
+            <span class="project-tag">Machine Learning</span>
+            <span class="project-tag">Python</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">ALS Detection</h3>
+          <p class="project-description">
+            A machine learning project for the early detection of ALS (Amyotrophic Lateral Sclerosis). Developed and
+            optimized models utilizing both voice samples and tabular data to accurately classify and detect early
+            indicators of the disease.
+          </p>
+          <div class="project-links">
+            <a href="http://als-detection.streamlit.app/" target="_blank" class="btn-light magnetic-btn" id="als-live">
+              <i class="fas fa-eye"></i> Live Demo
+            </a>
+            <a href="https://github.com/Hiren-Karwani/als-detection" target="_blank" class="btn-dark magnetic-btn"
+              id="als-github">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 02 · DataHub -->
+      <article class="item gsap-project-card" aria-label="DataHub Project">
+        <div class="project-visual" data-gradient="teal">
+          <span class="project-number">02</span>
+          <div class="project-tags">
+            <span class="project-tag">Flask</span>
+            <span class="project-tag">Data Engineering</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">DataHub</h3>
+          <p class="project-description">
+            A data management and ETL pipeline platform built with Python, Flask, and SQLite. Features seamless CSV
+            uploads, automated processing workflows, and an interactive dashboard for querying and visualizing customer,
+            product, and order datasets.
+          </p>
+          <div class="project-links">
+            <a href="http://datahub-yjtj.onrender.com/" target="_blank" class="btn-light magnetic-btn"
+              id="datahub-live">
+              <i class="fas fa-eye"></i> Live Demo
+            </a>
+            <a href="https://github.com/Hiren-Karwani/DataHub" target="_blank" class="btn-dark magnetic-btn"
+              id="datahub-github">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 03 · Homemade Harmony -->
+      <article class="item gsap-project-card" aria-label="Homemade Harmony Project">
+        <div class="project-visual" data-gradient="amber">
+          <span class="project-number">03</span>
+          <div class="project-tags">
+            <span class="project-tag">PHP</span>
+            <span class="project-tag">MySQL</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Homemade Harmony</h3>
+          <p class="project-description">
+            A full-stack tiffin ordering and delivery platform for homemade meals. Built with PHP and MySQL, it features
+            user authentication, secure cart management, an admin dashboard, and automated email workflows using
+            PHPMailer.
+          </p>
+          <div class="project-links">
+            <a href="http://homemade-harmony.infinityfreeapp.com/" target="_blank" class="btn-light magnetic-btn"
+              id="homemade-harmony-live">
+              <i class="fas fa-eye"></i> Live Demo
+            </a>
+            <a href="https://github.com/Hiren-Karwani/Homemade-Harmony" target="_blank" class="btn-dark magnetic-btn"
+              id="homemade-harmony-github">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 04 · Nutriguide -->
+      <article class="item gsap-project-card" aria-label="Nutriguide Project">
+        <div class="project-visual" data-gradient="green">
+          <span class="project-number">04</span>
+          <div class="project-tags">
+            <span class="project-tag">Web App</span>
+            <span class="project-tag">Health</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Nutriguide</h3>
+          <p class="project-description">
+            A comprehensive health and nutrition tracking web application. Integrates personalized tools for BMI
+            calculation, daily calorie tracking, dietary goal setting, and exploring healthy recipes to help users
+            maintain a balanced lifestyle.
+          </p>
+          <div class="project-links">
+            <a href="http://nutriguide.infinityfreeapp.com/" target="_blank" class="btn-light magnetic-btn"
+              id="nutriguide-live">
+              <i class="fas fa-eye"></i> Live Demo
+            </a>
+            <a href="https://github.com/Hiren-Karwani/Nutriguide" target="_blank" class="btn-dark magnetic-btn"
+              id="nutriguide-github">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <footer id="main-footer">
+    <p>Copyright &copy; 2026 &mdash; Hiren Karwani</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
